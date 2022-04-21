@@ -27,15 +27,15 @@ SELECT
    a.city,
    d.position,
    d.level
-from person p
+FROM person p
     INNER JOIN address a
         ON p.person_id = a.person_id
        INNER JOIN  position_description d
         ON p.position_id = d.position_id;
 		
-select schemaname as "schema name",
+SELECT schemaname as "schema name",
        matviewname as "view name",
        matviewowner as "owner",
        ispopulated as "is populated",
        definition
-from pg_matviews;
+FROM pg_matviews;
